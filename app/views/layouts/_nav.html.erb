@@ -1,0 +1,40 @@
+<nav class="navbar">
+  <div class="container-fluid main-navbar">
+    <div class="navbar-header navbar-right">
+      <ul class="nav">
+        <li class="navbar-right">
+          <a class="navbar-brand" href="/"><%= image_tag("rm1000logo.png", size: "80x80") %></a>
+        </li>
+      <li>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+          <h4>Menu</h4>
+        </button>
+      </li>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown active">
+          <a href="welcome/content" role="button" haspopup="true" aria-expanded="false">Content</a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Article 1</a></li>
+            <li><a href="#">Article 2</a></li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">Separated Link</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="/" class="active_nav">Home</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" haspopup="true" aria-expanded="false">Archive</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Article 1</a></li>
+            <li><a href="#">Article 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
