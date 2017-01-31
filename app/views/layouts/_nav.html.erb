@@ -16,8 +16,9 @@
         <li class="dropdown active">
           <a href="/welcome/content" role="button" haspopup="true" aria-expanded="false">Content</a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Article 1</a></li>
-            <li><a href="#">Article 2</a></li>
+            <% @nav_issues.each do |issue| %>
+            <li class="navbar_content_dropdown"><%= link_to "Issue #{issue.issue}: #{issue.name}", issue_path(issue) %></a></li>
+            <% end %>
             <li class="divider"></li>
             <li>
               <a href="#">Separated Link</a>
@@ -28,10 +29,12 @@
           <a href="/" class="active_nav">Home</a>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" haspopup="true" aria-expanded="false">Archive</a>
+          <a href="/welcome/mission_statement" role="button" haspopup="true" aria-expanded="false">Info</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Article 1</a></li>
-            <li><a href="#">Article 2</a></li>
+            <li><a href="/welcome/mission_statement">Mission Statement</a></li>
+            <li><a href="/welcome/editorial_team">Editorial Team</a></li>
+            <li><a href="#">Donate</a></li>
+            <li><a href="/welcome/contact">Contact</a></li>
           </ul>
         </li>
       </ul>
